@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style>
 img{
-  position: relative;
   width: 75px;
   height: 75px;
 }
@@ -17,7 +16,7 @@ img{
 <br>
 <div style="background-color:#00bfff">
 <br>
-<img src="logo.jpeg" style='position:absolute; top:1; left:1;' width='30' height='30'><center><h1>Twitter Search</h1></center></center>
+<img src="logo.jpeg" style='position:absolute; top:1; left:1;'><center><h1>Twitter Search</h1></center></center>
 <br>
 </div>
 <form name='f1' action='http://localhost:8080/TwitterHashTagSearch/Search' method='get'>

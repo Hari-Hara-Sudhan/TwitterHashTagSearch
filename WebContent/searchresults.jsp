@@ -1,5 +1,6 @@
 <%@ page import="java.util.*" %>
-
+<%@ page import="java.sql.*"%>
+<%@ page import="java.lang.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,7 +21,7 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   margin: 10px 5px;
   padding: 0 16px 16px 16px;
-  max-width: 468px;
+  max-width: 500px;
 }
 tweet{
 font-size: 16px;
@@ -37,6 +38,21 @@ aut
 <title>Matched tweets</title>
 </head>
 <body>
+<%
+//Statement st;
+//String myDriver = "org.gjt.mm.mysql.Driver";
+//String myUrl = "jdbc:mysql://localhost/testproject";
+//Class.forName(myDriver);
+//Connection conn = DriverManager.getConnection(myUrl, "root", "root");;
+//String sqlquery2 = " select distinct hashtag from twitterdata2" ;
+//st =conn.createStatement();
+//ResultSet rs2 = st.executeQuery(sqlquery2);
+//while(rs2.next())
+//{
+//rs2.getString(1);
+//}
+%>
+
 <!--
 <div style="background-color:#00bfff">
 <br>
@@ -61,11 +77,9 @@ while(itr.hasNext())
 	{
 	count ++;
 	ArrayList pList = (ArrayList) itr.next();
-	
 %>
 <p>
 <tweet><%=pList.get(3).toString()%>
-<%=pList.get(4).toString()%>
 </tweet>
 <br>
 <br>

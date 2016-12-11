@@ -164,7 +164,7 @@ public class Search extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	    
-		response.setIntHeader("Refresh", 180);
+		response.setIntHeader("Refresh", 120);
 		//newtweets=0;
 		System.out.println("calling the servlet again");
 		
