@@ -72,6 +72,9 @@ ArrayList hs = (ArrayList) al.get(0);
 <img src="logo.jpeg" style='position:absolute; top:1; left:1;' width='100' height='100'><center><h1><%=hs.get(5).toString()%></h1></center>
 <br>
 </div>
+<table>
+<tr>
+<td>
 <%Iterator itr = al.iterator();
 while(itr.hasNext())
 	{
@@ -91,8 +94,27 @@ while(itr.hasNext())
 <br>
 <br>
 <%	}
-}
-if( count == 0){
+}%>
+</td>
+<td></td><td></td>
+<td valign='top' align='right'><h3>RECENT SEARCHES<h3><br>
+<%Statement st;
+String myDriver = "org.gjt.mm.mysql.Driver";
+String myUrl = "jdbc:mysql://localhost/testproject";
+Class.forName(myDriver);
+Connection conn = DriverManager.getConnection(myUrl, "root", "root");;
+String sqlquery2 = " select distinct hashtag from twitterdata2" ;
+st =conn.createStatement();
+ResultSet rs2 = st.executeQuery(sqlquery2);
+while(rs2.next())
+{
+%>
+<a href='http://localhost:8080/TwitterHashTagSearch/searchrecent' method='get' name='t1'><%=rs2.getString(1)%></a><br>
+<%}
+%></td>
+</tr>
+</table>
+<%if( count == 0){
 %>
 No record found
 <%
