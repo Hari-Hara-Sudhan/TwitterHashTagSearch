@@ -8,7 +8,9 @@ public class SearchTest {
 
 	@Test
 	public void testSearch() {
-		//test cases to check the Search servlet 
+		//test cases to check the Search servlet
+
+
 	}
 
 }
